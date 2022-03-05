@@ -1,0 +1,298 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  text-decoration: none;
+}
+
+*::before, *::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+@font-face {
+  font-family: JakartaRegular;
+  src: url("../fonts/PlusJakartaDisplay-Regular.otf");
+}
+
+@font-face {
+  font-family: JakartaMedium;
+  src: url("../fonts/PlusJakartaDisplay-Medium.otf");
+}
+
+@font-face {
+  font-family: JakartaBold;
+  src: url("../fonts/PlusJakartaDisplay-Bold.otf");
+}
+
+.btn {
+  border-radius: 8px;
+  text-decoration: none;
+  padding: 10px 15px;
+  font-size: 18px;
+  -webkit-transition: all .2s linear;
+  transition: all .2s linear;
+  display: inline-block;
+}
+
+.btn-primary {
+  color: #fff;
+  background-color: #1F509F;
+  border: 1px solid #1F509F;
+}
+
+.btn-outline {
+  color: #1f509f;
+  border: 1px solid #1F509F;
+  background-color: #fff;
+}
+
+.btn-sm {
+  font-size: 14px;
+}
+
+.btn:hover {
+  -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+body {
+  font-family: JakartaRegular, sans-serif;
+  color: #072125;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+body a {
+  color: #072125;
+}
+
+main.main {
+  width: 100%;
+  max-width: 1200px;
+  padding-top: 20px;
+  margin: auto 20px;
+}
+
+main.main .navbar {
+  width: 100%;
+  padding-bottom: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main.main .navbar-nav .menu-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+main.main .navbar-nav .menu-list-item {
+  padding-left: 10px;
+  padding-right: 20px;
+}
+
+main.main .navbar-nav .menu-list-item:last-child {
+  padding-right: 10px;
+}
+
+main.main .dashboard {
+  background-color: #f6f9fb;
+  border-radius: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 20px;
+}
+
+main.main .dashboard .description {
+  padding: 10px 5px 10px 30px;
+  position: relative;
+}
+
+main.main .dashboard .description-title {
+  font-family: JakartaBold, sans-serif;
+  font-size: 50px;
+  padding-bottom: 20px;
+}
+
+main.main .dashboard .description-text {
+  font-size: 22px;
+  padding-bottom: 20px;
+  line-height: initial;
+}
+
+main.main .dashboard .description-text.clr-gray {
+  color: #6B747A;
+}
+
+main.main .dashboard .description-text .clr-orange {
+  color: #F29D4B;
+}
+
+main.main .dashboard .description-buttons .btn {
+  margin-right: 15px;
+}
+
+main.main .dashboard .description.center-items {
+  width: 100%;
+  max-width: 600px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 50px 0;
+  margin: auto;
+  text-align: center;
+}
+
+main.main .dashboard-image {
+  padding: 10px 0;
+}
+
+main.main .dashboard-image .mg-right {
+  margin-right: -75px;
+}
+
+main.main .dashboard.chain-img {
+  padding-bottom: 80px;
+}
+
+main.main .dashboard + .mg-bottom {
+  margin-top: -150px;
+}
+
+main.main .dashboard + .mg-bottom img {
+  width: 100%;
+}
+
+main.main .brands {
+  width: 100%;
+  padding-bottom: 20px;
+}
+
+main.main .brands .brand-list {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  padding: 50px 0;
+}
+
+main.main .brands .brand-list .list-item {
+  padding: 10px;
+}
+
+main.main .brands .brand-list .list-item img {
+  width: 100%;
+}
+
+main.main .services {
+  padding: 20px 50px;
+}
+
+main.main .services-title {
+  width: 60%;
+  font-size: 36px;
+  font-family: JakartaMedium, sans-serif;
+}
+
+main.main .services-list {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin: 20px -15px;
+}
+
+main.main .services-list .list-item {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 calc(25% - 40px);
+          flex: 1 0 calc(25% - 40px);
+  border: 1px solid #f1f1f1;
+  margin: 15px;
+  border-radius: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 30px 0;
+}
+/*# sourceMappingURL=style.css.map */

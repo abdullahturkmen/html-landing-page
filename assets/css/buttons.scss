@@ -1,0 +1,30 @@
+@import './colors';
+
+.btn {
+    border-radius: 8px;
+    text-decoration: none;
+    padding: 10px 15px;
+    font-size: 18px;
+    transition: all .2s linear;
+    display: inline-block;
+
+    &-primary {
+        color: #fff;
+        background-color: $clr-blue;
+        border: 1px solid $clr-blue;
+    }
+
+    &-outline {
+        color: #1f509f;
+        border: 1px solid $clr-blue;
+        background-color: #fff;
+    }
+
+    &-sm{
+        font-size: 14px;
+    }
+
+    &:hover{
+            box-shadow: 0 0 10px rgba(0,0,0,.1);
+    }
+}

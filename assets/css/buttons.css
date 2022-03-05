@@ -1,0 +1,31 @@
+.btn {
+  border-radius: 8px;
+  text-decoration: none;
+  padding: 10px 15px;
+  font-size: 18px;
+  -webkit-transition: all .2s linear;
+  transition: all .2s linear;
+  display: inline-block;
+}
+
+.btn-primary {
+  color: #fff;
+  background-color: #1F509F;
+  border: 1px solid #1F509F;
+}
+
+.btn-outline {
+  color: #1f509f;
+  border: 1px solid #1F509F;
+  background-color: #fff;
+}
+
+.btn-sm {
+  font-size: 14px;
+}
+
+.btn:hover {
+  -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+/*# sourceMappingURL=buttons.css.map */
