@@ -203,14 +203,27 @@ main.main .navbar {
     width: 100%;
     background-color: #f6f9fb;
     z-index: 9;
-    -webkit-transition: all .3s ease-in-out;
-    transition: all .3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
   }
 }
 
 @media (max-width: 1320px) {
   main.main .navbar-nav.open {
     left: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
 }
 
@@ -226,12 +239,21 @@ main.main .navbar-nav .menu-list {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
 }
 
 main.main .navbar-nav .menu-list-item {
   padding-left: 10px;
   padding-right: 20px;
+}
+
+@media (max-width: 1320px) {
+  main.main .navbar-nav .menu-list-item {
+    margin-bottom: 25px;
+  }
 }
 
 main.main .navbar-nav .menu-list-item:last-child {
@@ -250,7 +272,7 @@ main.main .navbar-nav .menu-close-btn {
 }
 
 main.main .navbar-nav .menu-close-btn:before, main.main .navbar-nav .menu-close-btn:after {
-  content: '';
+  content: "";
   width: 50%;
   position: absolute;
   height: 2px;
@@ -304,7 +326,7 @@ main.main .navbar-btn .menu-open-btn {
 }
 
 main.main .navbar-btn .menu-open-btn:before, main.main .navbar-btn .menu-open-btn:after {
-  content: '';
+  content: "";
   width: 25%;
   position: absolute;
   height: 2px;
