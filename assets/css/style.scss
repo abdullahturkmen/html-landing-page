@@ -107,6 +107,12 @@ main.main {
                     display: none;
                 }
             }
+
+            & > .btn{
+                @include MinWidthResponsive(1321px) {
+                    display: none;
+                }
+            }
         }
 
         &-btn {

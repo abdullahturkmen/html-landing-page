@@ -275,6 +275,12 @@ main.main .navbar-nav .menu-close-btn:after {
   }
 }
 
+@media (min-width: 1321px) {
+  main.main .navbar-nav > .btn {
+    display: none;
+  }
+}
+
 main.main .navbar-btn {
   display: -webkit-box;
   display: -ms-flexbox;
