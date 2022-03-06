@@ -55,21 +55,26 @@ main.main {
             position: relative;
 
             &-title {
-                font-family: JakartaBold, sans-serif;
-                font-size: 50px;
+                font-family: JakartaMedium, sans-serif;
+                font-size: 48px;
                 padding-bottom: 20px;
+
+                &.bold-title {
+                    font-family: JakartaBold, sans-serif;
+                    font-size: 50px;
+                }
             }
 
             &-text {
                 font-size: 22px;
-                padding-bottom: 20px;
+                padding-bottom: 30px;
                 line-height: initial;
 
-                &.clr-gray{
-                    color: #6B747A;
+                &.clr-gray {
+                    color: #6b747a;
                 }
-                .clr-orange{
-                    color: #F29D4B;
+                .clr-orange {
+                    color: #f29d4b;
                 }
             }
 
@@ -79,7 +84,7 @@ main.main {
                 }
             }
 
-            &.center-items{
+            &.center-items {
                 width: 100%;
                 max-width: 600px;
                 display: flex;
@@ -92,20 +97,49 @@ main.main {
         }
         &-image {
             padding: 10px 0;
-            .mg-right{
+            .mg-right {
                 margin-right: -75px;
             }
         }
 
-        &.chain-img{
+        &.chain-img {
             padding-bottom: 80px;
         }
 
-        & + .mg-bottom{
+        & + .mg-bottom {
             margin-top: -150px;
 
-            img{
+            img {
                 width: 100%;
+            }
+        }
+
+        &-blue {
+            background-color: #2c54a3;
+            color: #fff;
+            position: relative;
+            overflow: hidden;
+
+            &:before,
+            &:after {
+                content: "";
+                position: absolute;
+                height: 100%;
+                aspect-ratio: 1;
+                background-color: #ffffff;
+                opacity: 0.05;
+                top: 0;
+                border-radius: 100%;
+            }
+
+            &:before {
+                left: 0;
+                transform: translate(-50%, 50%);
+            }
+
+            &:after {
+                right: 0;
+                transform: translate(50%, -50%);
             }
         }
     }
@@ -130,6 +164,79 @@ main.main {
         }
     }
 
+    .features {
+        padding: 20px 50px;
+        display: flex;
+        align-items: center;
+        margin-bottom: 20px;
+
+        .description {
+            padding-right: 50px;
+            flex: 1 0 calc(50% - 50px);
+
+            &-title {
+                font-family: JakartaBold, sans-serif;
+                font-size: 36px;
+                padding-bottom: 20px;
+                line-height: initial;
+            }
+
+            &-text {
+                font-size: 18px;
+                padding-bottom: 20px;
+                line-height: initial;
+                color: #6b747a;
+            }
+        }
+
+        .details {
+            flex: 1 0 50%;
+            .features-list {
+                display: flex;
+                flex-wrap: wrap;
+
+                &-item {
+                    flex: 1 0 calc(50% - 20px);
+                    padding: 20px 10px;
+
+                    .features {
+                        &-icon {
+                            &.icon {
+                                display: block;
+                                padding-bottom: 20px;
+
+                                &-clock {
+                                    content: url("./../img/features/icon-clock.svg");
+                                }
+                                &-frame {
+                                    content: url("./../img/features/icon-frame.svg");
+                                }
+                                &-check {
+                                    content: url("./../img/features/icon-check.svg");
+                                }
+                                &-finger-print {
+                                    content: url("./../img/features/icon-finger-print.svg");
+                                }
+                            }
+                        }
+
+                        &-title {
+                            font-family: JakartaBold, sans-serif;
+                            font-size: 18px;
+                            padding-bottom: 12px;
+                        }
+
+                        &-text {
+                            font-size: 14px;
+                            color: #6b747a;
+                            line-height: initial;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
     .services {
         padding: 20px 50px;
 
@@ -137,6 +244,7 @@ main.main {
             width: 60%;
             font-size: 36px;
             font-family: JakartaMedium, sans-serif;
+            line-height: initial;
         }
 
         &-list {
@@ -154,6 +262,205 @@ main.main {
                 align-items: center;
                 justify-content: center;
                 padding: 30px 0;
+            }
+        }
+    }
+
+    .categories {
+        display: flex;
+        align-items: stretch;
+        margin: 0 -30px 20px;
+
+        & > * {
+            flex: 1 0 calc(33.333% - 100px);
+            margin: 0 30px;
+        }
+
+        .description {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+
+            &-title {
+                font-family: JakartaMedium, sans-serif;
+                font-size: 36px;
+                padding-bottom: 20px;
+            }
+
+            &-text {
+                font-size: 18px;
+                padding-bottom: 20px;
+                color: #6b747a;
+                line-height: initial;
+            }
+        }
+
+        .category-item {
+            background-color: #f6f8fa;
+            border-radius: 20px;
+            padding: 20px;
+
+            &-img {
+                width: 100%;
+                border-radius: 12px;
+                margin-bottom: 20px;
+            }
+
+            &-title {
+                font-family: JakartaMedium, sans-serif;
+                font-size: 24px;
+                padding-bottom: 20px;
+            }
+
+            &-text {
+                color: #6b747a;
+                line-height: initial;
+            }
+        }
+    }
+
+    .article {
+        display: flex;
+        align-items: center;
+        background-color: #fdf1e1;
+        border-radius: 40px;
+        margin: 150px 0 40px;
+
+        &.bg-{
+
+            &blue{
+                background-color: #E5F4FE;
+            }
+
+            &orange{
+                background-color: #fdf1e1;
+            }
+        }
+
+        &-img {
+            flex: 0 0 50%;
+            margin-top: -80px;
+        }
+
+        .description {
+            flex: 0 0 calc(40% - 40px);
+            background-color: #fff;
+            border-radius: inherit;
+            padding: 50px;
+            margin: auto;
+
+            &-title {
+                font-family: JakartaMedium, sans-serif;
+                font-size: 36px;
+                padding-bottom: 20px;
+            }
+
+            &-text {
+                font-size: 18px;
+                padding-bottom: 20px;
+                color: #6b747a;
+                line-height: initial;
+            }
+        }
+    }
+
+    .cards {
+        display: flex;
+        flex-direction: column;
+        padding-bottom: 20px;
+        counter-reset: card;
+
+        &-section-title {
+            font-size: 36px;
+            text-align: center;
+            font-family: JakartaMedium, sans-serif;
+            padding: 50px 0;
+        }
+
+        .card-list {
+            display: flex;
+            flex-wrap: wrap;
+            margin: 0 -20px 50px;
+            position: relative;
+
+            &::before {
+                content: "";
+                background-image: url("./../img/card-list-bg.svg");
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: contain;
+                width: 65%;
+                aspect-ratio: 21/5;
+                display: block;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                z-index: -1;
+            }
+
+            &-item {
+                flex: 1 0 calc(33.333% - 100px);
+                background-color: #f6f8fa;
+                border-radius: 20px;
+                padding: 40px 30px;
+                margin: 20px;
+
+                .card-item {
+                    &-counter {
+                        width: 56px;
+                        aspect-ratio: 1;
+                        display: block;
+                        position: relative;
+                        border-radius: 12px;
+                        margin-bottom: 20px;
+                        background-color: $clr-blue;
+
+                        &:before {
+                            position: absolute;
+                            top: 50%;
+                            left: 50%;
+                            transform: translate(-50%, -50%);
+                            counter-increment: card;
+                            content: counter(card);
+                            color: #fff;
+                            font-size: 22px;
+                        }
+
+                        &.clr- {
+                            &green {
+                                background-color: #e9fff0;
+                                &::before {
+                                    color: #69c874;
+                                }
+                            }
+                            &orange {
+                                background-color: #fdf2e2;
+                                &::before {
+                                    color: #f29d4b;
+                                }
+                            }
+                            &purple {
+                                background-color: #f9e6fd;
+                                &::before {
+                                    color: #c856df;
+                                }
+                            }
+                        }
+                    }
+
+                    &-title {
+                        font-size: 24px;
+                        font-family: JakartaMedium, sans-serif;
+                        margin-bottom: 20px;
+                    }
+
+                    &-text {
+                        color: #6b747a;
+                        line-height: initial;
+                    }
+                }
             }
         }
     }

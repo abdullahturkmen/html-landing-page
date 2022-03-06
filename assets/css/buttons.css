@@ -3,21 +3,46 @@
   text-decoration: none;
   padding: 10px 15px;
   font-size: 18px;
-  -webkit-transition: all .2s linear;
-  transition: all .2s linear;
+  -webkit-transition: all 0.2s linear;
+  transition: all 0.2s linear;
   display: inline-block;
+  border: 1px solid transparent;
 }
 
 .btn-primary {
   color: #fff;
   background-color: #1F509F;
-  border: 1px solid #1F509F;
+  border-color: #1F509F;
 }
 
-.btn-outline {
-  color: #1f509f;
-  border: 1px solid #1F509F;
+.btn-primary-outline {
+  color: #1F509F;
+  border-color: #1F509F;
   background-color: #fff;
+}
+
+.btn-warning {
+  color: #fff;
+  background-color: #F29D4B;
+  border-color: #F29D4B;
+}
+
+.btn-warning-outline {
+  color: #F29D4B;
+  border-color: #F29D4B;
+  background-color: #fff;
+}
+
+.btn-light {
+  color: #1F509F;
+  background-color: #fff;
+  border-color: #fff;
+}
+
+.btn-light-outline {
+  color: #fff;
+  border-color: #fff;
+  background-color: #1F509F;
 }
 
 .btn-sm {
