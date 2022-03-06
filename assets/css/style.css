@@ -318,7 +318,7 @@ main.main .brands .brand-list .list-item img {
 }
 
 main.main .features {
-  padding: 20px 50px;
+  padding: 50px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -451,6 +451,7 @@ main.main .categories {
       -ms-flex-align: stretch;
           align-items: stretch;
   margin: 0 -30px 20px;
+  padding: 30px 0;
 }
 
 main.main .categories > * {
@@ -503,6 +504,7 @@ main.main .categories .category-item-title {
   font-family: JakartaMedium, sans-serif;
   font-size: 24px;
   padding-bottom: 20px;
+  line-height: initial;
 }
 
 main.main .categories .category-item-text {
