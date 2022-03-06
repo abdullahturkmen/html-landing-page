@@ -1,4 +1,5 @@
 @import "./reset";
+@import "./responsive";
 @import "./fonts";
 @import "./colors";
 @import "./buttons";
@@ -12,7 +13,6 @@ body {
     a {
         color: #072125;
     }
-
 }
 
 main.main {
@@ -21,6 +21,10 @@ main.main {
     padding-top: 20px;
     margin: auto 20px;
 
+    @include MaxWidthResponsive(576px) {
+        width: calc(100% - 20px);
+    }
+
     .navbar {
         width: 100%;
         padding: 20px 0 40px;
@@ -28,7 +32,19 @@ main.main {
         justify-content: space-between;
         align-items: center;
 
+        @include MaxWidthResponsive(768px) {
+            padding: 15px 0 30px;
+        }
+
+        @include MaxWidthResponsive(576px) {
+            padding: 10px 0 20px;
+        }
+
         &-nav {
+            @include MaxWidthResponsive(1320px) {
+                display: none;
+            }
+
             .menu-list {
                 display: flex;
 
@@ -51,19 +67,56 @@ main.main {
         align-items: center;
         margin-bottom: 20px;
 
+        @include MaxWidthResponsive(768px) {
+            border-radius: 30px;
+        }
+
+        @include MaxWidthResponsive(576px) {
+            border-radius: 20px;
+        }
+
         .description {
             padding: 10px 5px 10px 30px;
             position: relative;
             flex: 0 1 40%;
+
+            @include MaxWidthResponsive(1320px) {
+                padding: 40px 30px;
+                flex: 0 1 auto;
+            }
+
+            @include MaxWidthResponsive(768px) {
+                padding: 30px 20px;
+            }
+
+            @include MaxWidthResponsive(576px) {
+                padding: 20px 10px;
+            }
 
             &-title {
                 font-family: JakartaMedium, sans-serif;
                 font-size: 48px;
                 padding-bottom: 20px;
 
+                @include MaxWidthResponsive(768px) {
+                    font-size: 36px;
+                }
+
+                @include MaxWidthResponsive(576px) {
+                    font-size: 32px;
+                }
+
                 &.bold-title {
                     font-family: JakartaBold, sans-serif;
                     font-size: 50px;
+
+                    @include MaxWidthResponsive(768px) {
+                        font-size: 40px;
+                    }
+
+                    @include MaxWidthResponsive(576px) {
+                        font-size: 36px;
+                    }
                 }
             }
 
@@ -71,6 +124,14 @@ main.main {
                 font-size: 22px;
                 padding-bottom: 30px;
                 line-height: initial;
+
+                @include MaxWidthResponsive(768px) {
+                    font-size: 18px;
+                }
+
+                @include MaxWidthResponsive(576px) {
+                    font-size: 16px;
+                }
 
                 &.clr-gray {
                     color: #6b747a;
@@ -83,6 +144,7 @@ main.main {
             &-buttons {
                 .btn {
                     margin-right: 15px;
+                    margin-bottom: 10px;
                 }
             }
 
@@ -92,7 +154,7 @@ main.main {
                 display: flex;
                 flex-direction: column;
                 align-items: center;
-                padding: 50px 0;
+                padding: 50px 20px;
                 margin: auto;
                 text-align: center;
             }
@@ -100,6 +162,11 @@ main.main {
         &-image {
             padding: 10px 0;
             flex: 0 1 60%;
+
+            @include MaxWidthResponsive(1320px) {
+                display: none;
+            }
+
             &.mg-right {
                 margin-right: -75px;
             }
@@ -107,10 +174,18 @@ main.main {
 
         &.chain-img {
             padding-bottom: 80px;
+
+            @include MaxWidthResponsive(576px) {
+                padding-bottom: 0;
+            }
         }
 
         & + .mg-bottom {
             margin-top: -150px;
+
+            @include MaxWidthResponsive(576px) {
+                display: none;
+            }
 
             img {
                 width: 100%;
@@ -151,6 +226,14 @@ main.main {
         width: 100%;
         padding-bottom: 20px;
 
+        @include MaxWidthResponsive(768px) {
+            padding-bottom: 15px;
+        }
+
+        @include MaxWidthResponsive(576px) {
+            padding-bottom: 10px;
+        }
+
         .brand-list {
             width: 100%;
             display: flex;
@@ -158,8 +241,21 @@ main.main {
             justify-content: space-evenly;
             padding: 50px 0 20px;
 
+            @include MaxWidthResponsive(768px) {
+                padding: 30px 0 10px;
+            }
+
+            @include MaxWidthResponsive(576px) {
+                padding: 15px 0 5px;
+            }
+
             .list-item {
                 padding: 10px;
+
+                @include MaxWidthResponsive(576px) {
+                    padding: 5px;
+                }
+
                 img {
                     width: 100%;
                 }
@@ -173,15 +269,41 @@ main.main {
         align-items: center;
         margin-bottom: 20px;
 
+        @include MaxWidthResponsive(992px) {
+            flex-direction: column;
+            padding: 20px 30px;
+        }
+
+        @include MaxWidthResponsive(768px) {
+            padding: 20px;
+        }
+
+        @include MaxWidthResponsive(576px) {
+            padding: 10px;
+        }
+
         .description {
             padding-right: 50px;
             flex: 1 0 calc(50% - 50px);
+
+            @include MaxWidthResponsive(992px) {
+                padding-right: 0;
+                padding-bottom: 50px;
+            }
 
             &-title {
                 font-family: JakartaBold, sans-serif;
                 font-size: 36px;
                 padding-bottom: 20px;
                 line-height: initial;
+
+                @include MaxWidthResponsive(768px) {
+                    font-size: 32px;
+                }
+
+                @include MaxWidthResponsive(576px) {
+                    font-size: 24px;
+                }
             }
 
             &-text {
@@ -189,6 +311,14 @@ main.main {
                 padding-bottom: 20px;
                 line-height: initial;
                 color: #6b747a;
+
+                @include MaxWidthResponsive(768px) {
+                    font-size: 16px;
+                }
+
+                @include MaxWidthResponsive(576px) {
+                    font-size: 14px;
+                }
             }
         }
 
@@ -197,10 +327,16 @@ main.main {
             .features-list {
                 display: flex;
                 flex-wrap: wrap;
+                margin: 0 -10px;
 
                 &-item {
                     flex: 1 0 calc(50% - 20px);
                     padding: 20px 10px;
+
+                    @include MaxWidthResponsive(576px) {
+                        flex: 1 0 calc(100% - 20px);
+                        padding: 20px 0;
+                    }
 
                     .features {
                         &-icon {
@@ -245,11 +381,35 @@ main.main {
         flex-direction: column;
         padding: 20px 50px;
 
+        @include MaxWidthResponsive(992px) {
+            padding: 20px 30px;
+        }
+
+        @include MaxWidthResponsive(768px) {
+            padding: 20px;
+        }
+
+        @include MaxWidthResponsive(576px) {
+            padding: 10px;
+        }
+
         &-title {
             width: 60%;
             font-size: 36px;
             font-family: JakartaMedium, sans-serif;
             line-height: initial;
+
+            @include MaxWidthResponsive(992px) {
+                width: 100%;
+            }
+
+            @include MaxWidthResponsive(768px) {
+                font-size: 32px;
+            }
+
+            @include MaxWidthResponsive(576px) {
+                font-size: 24px;
+            }
         }
 
         &-list {
@@ -257,11 +417,19 @@ main.main {
             flex-wrap: wrap;
             margin: 20px -20px;
 
+            @include MaxWidthResponsive(576px) {
+                margin: 20px -10px;
+            }
+
             .list-item {
                 flex: 0 1 25%;
                 display: flex;
                 align-items: stretch;
                 justify-content: center;
+
+                @include MaxWidthResponsive(768px) {
+                    flex: 0 1 50%;
+                }
 
                 &-img {
                     width: 100%;
@@ -270,8 +438,18 @@ main.main {
                     display: flex;
                     align-items: center;
                     justify-content: center;
-                    padding: 30px 0;
+                    padding: 30px 5px;
                     margin: 20px;
+
+                    @include MaxWidthResponsive(992px) {
+                        padding: 15px 5px;
+                        margin: 10px;
+                    }
+
+                    @include MaxWidthResponsive(576px) {
+                        padding: 15px 5px;
+                        margin: 5px;
+                    }
                 }
             }
         }
@@ -279,13 +457,34 @@ main.main {
 
     .categories {
         display: flex;
+        flex-wrap: wrap;
         align-items: stretch;
         margin: 0 -30px 20px;
         padding: 30px 0;
 
+        @include MaxWidthResponsive(1320px) {
+            margin: 0 -20px 20px;
+        }
+
+        @include MaxWidthResponsive(992px) {
+            margin: 0 -10px 20px;
+        }
+
+        @include MaxWidthResponsive(576px) {
+            flex-direction: column;
+        }
+
         & > * {
             flex: 1 0 calc(33.333% - 100px);
             margin: 0 30px;
+
+            @include MaxWidthResponsive(1320px) {
+                margin: 0 20px;
+            }
+
+            @include MaxWidthResponsive(992px) {
+                margin: 0 10px;
+            }
         }
 
         .description {
@@ -294,10 +493,23 @@ main.main {
             flex-direction: column;
             justify-content: center;
 
+            @include MaxWidthResponsive(992px) {
+                flex: 1 1 100%;
+                padding-bottom: 50px;
+            }
+
             &-title {
                 font-family: JakartaMedium, sans-serif;
                 font-size: 36px;
                 padding-bottom: 20px;
+
+                @include MaxWidthResponsive(768px) {
+                    font-size: 32px;
+                }
+
+                @include MaxWidthResponsive(576px) {
+                    font-size: 24px;
+                }
             }
 
             &-text {
@@ -305,6 +517,14 @@ main.main {
                 padding-bottom: 20px;
                 color: #6b747a;
                 line-height: initial;
+
+                @include MaxWidthResponsive(768px) {
+                    font-size: 16px;
+                }
+
+                @include MaxWidthResponsive(576px) {
+                    font-size: 14px;
+                }
             }
         }
 
@@ -312,6 +532,10 @@ main.main {
             background-color: #f6f8fa;
             border-radius: 20px;
             padding: 20px;
+
+            @include MaxWidthResponsive(576px) {
+                margin-bottom: 30px;
+            }
 
             &-img {
                 width: 100%;
@@ -340,6 +564,21 @@ main.main {
         border-radius: 40px;
         margin: 150px 0 40px;
 
+        @include MaxWidthResponsive(992px) {
+            flex-direction: column;
+            margin: 120px 0 40px;
+        }
+
+        @include MaxWidthResponsive(768px) {
+            border-radius: 30px;
+            margin: 80px 0 40px;
+        }
+
+        @include MaxWidthResponsive(576px) {
+            border-radius: 20px;
+            margin: 40px 0;
+        }
+
         &.bg- {
             &blue {
                 background-color: #e5f4fe;
@@ -352,7 +591,11 @@ main.main {
 
         &-img {
             flex: 0 0 50%;
-            margin-top: -80px;
+            margin-top: -60px;
+
+            @include MaxWidthResponsive(992px) {
+                padding: 50px 50px 0;
+            }
         }
 
         .description {
@@ -362,10 +605,33 @@ main.main {
             padding: 50px;
             margin: auto;
 
+            @include MaxWidthResponsive(992px) {
+                padding: 40px;
+                margin: 0 25px 25px;
+            }
+
+            @include MaxWidthResponsive(768px) {
+                padding: 30px;
+                margin: 0 20px 20px;
+            }
+
+            @include MaxWidthResponsive(576px) {
+                padding: 20px;
+                margin: 0 15px 15px;
+            }
+
             &-title {
                 font-family: JakartaMedium, sans-serif;
                 font-size: 36px;
                 padding-bottom: 20px;
+
+                @include MaxWidthResponsive(768px) {
+                    font-size: 32px;
+                }
+
+                @include MaxWidthResponsive(576px) {
+                    font-size: 24px;
+                }
             }
 
             &-text {
@@ -373,6 +639,14 @@ main.main {
                 padding-bottom: 20px;
                 color: #6b747a;
                 line-height: initial;
+
+                @include MaxWidthResponsive(768px) {
+                    font-size: 16px;
+                }
+
+                @include MaxWidthResponsive(576px) {
+                    font-size: 14px;
+                }
             }
         }
     }
@@ -388,13 +662,28 @@ main.main {
             text-align: center;
             font-family: JakartaMedium, sans-serif;
             padding: 50px 0;
+
+            @include MaxWidthResponsive(768px) {
+                font-size: 32px;
+            }
+
+            @include MaxWidthResponsive(576px) {
+                font-size: 24px;
+            }
         }
 
         .card-list {
             display: flex;
-            flex-wrap: wrap;
             margin: 0 -20px 50px;
             position: relative;
+
+            @include MaxWidthResponsive(992px) {
+                margin: 0 -10px 30px;
+            }
+
+            @include MaxWidthResponsive(768px) {
+                flex-direction: column;
+            }
 
             &::before {
                 content: "";
@@ -410,6 +699,10 @@ main.main {
                 left: 50%;
                 transform: translate(-50%, -50%);
                 z-index: -1;
+
+                @include MaxWidthResponsive(768px) {
+                    transform: translate(-50%, -50%) rotate(90deg);
+                }
             }
 
             &-item {
@@ -418,6 +711,11 @@ main.main {
                 border-radius: 20px;
                 padding: 40px 30px;
                 margin: 20px;
+
+                @include MaxWidthResponsive(992px) {
+                    padding: 24px 15px;
+                    margin: 10px;
+                }
 
                 .card-item {
                     &-counter {
@@ -486,10 +784,13 @@ main.main {
             justify-content: space-between;
             padding: 60px 0 40px;
 
-            .logo{
+            @include MaxWidthResponsive(992px) {
+                flex-direction: column;
+            }
 
-                &-info{
-                    max-width:220px;
+            .logo {
+                &-info {
+                    max-width: 220px;
                     padding: 20px 0;
                     color: #20484f;
                     line-height: initial;
@@ -501,11 +802,30 @@ main.main {
             display: flex;
             flex: 0 1 50%;
 
+            @include MaxWidthResponsive(992px) {
+                flex: 1 1 100%;
+                padding: 20px 0 0;
+                justify-content: space-between;
+            }
+
+            @include MaxWidthResponsive(576px) {
+                flex-direction: column;
+            }
+
             &-col {
                 padding-right: 30px;
 
+                @include MaxWidthResponsive(576px) {
+                    padding-right: 0;
+                    padding-bottom: 30px;
+                }
+
                 &:last-child {
                     padding-right: 0;
+
+                    @include MaxWidthResponsive(576px) {
+                        padding-bottom: 0;
+                    }
                 }
 
                 .menu-list {
@@ -537,7 +857,17 @@ main.main {
             font-size: 14px;
             margin: 20px 0 50px;
             color: #20484f;
+            padding: 0 20px;
+
+            @include MaxWidthResponsive(768px) {
+                border-radius: 30px;
+                margin: 15px 0 40px;
+            }
+
+            @include MaxWidthResponsive(576px) {
+                border-radius: 20px;
+                margin: 10px 0 30px;
+            }
         }
     }
 }
-
