@@ -50,15 +50,15 @@ main.main {
                 background-color: #f6f9fb;
                 z-index: 9;
                 transition: all 0.3s ease-in-out;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
             }
 
             &.open {
                 @include MaxWidthResponsive(1320px) {
                     left: 0;
-                    display: flex;
-                    flex-direction: column;
-                    justify-content: center;
-                    align-items: center;
                 }
             }
 
@@ -73,7 +73,7 @@ main.main {
                 &-item {
                     padding-left: 10px;
                     padding-right: 20px;
-                    
+
                     @include MaxWidthResponsive(1320px) {
                         margin-bottom: 25px;
                     }
