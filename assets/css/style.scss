@@ -42,11 +42,28 @@ main.main {
 
         &-nav {
             @include MaxWidthResponsive(1320px) {
-                display: none;
+                position: fixed;
+                left: -100%;
+                top: 0;
+                height: 100%;
+                width: 100%;
+                background-color: #f6f9fb;
+                z-index: 9;
+                transition: all .3s ease-in-out;
+            }
+
+            &.open{
+                @include MaxWidthResponsive(1320px) {
+                    left: 0;
+                }
             }
 
             .menu-list {
                 display: flex;
+
+                @include MaxWidthResponsive(1320px) {
+                    flex-direction: column;
+                }
 
                 &-item {
                     padding-left: 10px;
@@ -55,6 +72,81 @@ main.main {
                     &:last-child {
                         padding-right: 10px;
                     }
+                }
+            }
+
+            .menu-close-btn {
+                border: 1px solid $clr-blue;
+                border-radius: 8px;
+                height: 34px;
+                width: 34px;
+                position: absolute;
+                right: 20px;
+                top: 20px;
+                cursor: pointer;
+
+                &:before, &:after {
+                    content: '';
+                    width: 50%;
+                    position: absolute;
+                    height: 2px;
+                    background-color: $clr-blue;
+                    top: 50%;
+                    left: 50%;
+                }
+
+                &:before {
+                    transform: translate(-50%, -50%) rotate(45deg);
+                }
+
+                &:after {
+                    transform: translate(-50%, -50%) rotate(-45deg);
+                }
+
+                @include MinWidthResponsive(1321px) {
+                    display: none;
+                }
+            }
+        }
+
+        &-btn {
+            display: flex;
+            .btn {
+                @include MaxWidthResponsive(576px) {
+                    display: none;
+                }
+            }
+
+            .menu-open-btn {
+                border: 1px solid $clr-blue;
+                border-radius: 8px;
+                margin-left: 10px;
+                height: 34px;
+                width: 40px;
+                position: relative;
+                cursor: pointer;
+
+                &:before, &:after {
+                    content: '';
+                    width: 25%;
+                    position: absolute;
+                    height: 2px;
+                    background-color: $clr-blue;
+                    top: 50%;
+                }
+
+                &:before {
+                    left: 50%;
+                    box-shadow: 0 -5px 0 0 $clr-blue;
+                }
+
+                &:after {
+                    right: 50%;
+                    box-shadow: 0 5px 0 0 $clr-blue;
+                }
+
+                @include MinWidthResponsive(1321px) {
+                    display: none;
                 }
             }
         }

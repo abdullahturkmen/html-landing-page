@@ -196,7 +196,21 @@ main.main .navbar {
 
 @media (max-width: 1320px) {
   main.main .navbar-nav {
-    display: none;
+    position: fixed;
+    left: -100%;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #f6f9fb;
+    z-index: 9;
+    -webkit-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
+  }
+}
+
+@media (max-width: 1320px) {
+  main.main .navbar-nav.open {
+    left: 0;
   }
 }
 
@@ -206,6 +220,15 @@ main.main .navbar-nav .menu-list {
   display: flex;
 }
 
+@media (max-width: 1320px) {
+  main.main .navbar-nav .menu-list {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
 main.main .navbar-nav .menu-list-item {
   padding-left: 10px;
   padding-right: 20px;
@@ -213,6 +236,92 @@ main.main .navbar-nav .menu-list-item {
 
 main.main .navbar-nav .menu-list-item:last-child {
   padding-right: 10px;
+}
+
+main.main .navbar-nav .menu-close-btn {
+  border: 1px solid #1F509F;
+  border-radius: 8px;
+  height: 34px;
+  width: 34px;
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  cursor: pointer;
+}
+
+main.main .navbar-nav .menu-close-btn:before, main.main .navbar-nav .menu-close-btn:after {
+  content: '';
+  width: 50%;
+  position: absolute;
+  height: 2px;
+  background-color: #1F509F;
+  top: 50%;
+  left: 50%;
+}
+
+main.main .navbar-nav .menu-close-btn:before {
+  -webkit-transform: translate(-50%, -50%) rotate(45deg);
+          transform: translate(-50%, -50%) rotate(45deg);
+}
+
+main.main .navbar-nav .menu-close-btn:after {
+  -webkit-transform: translate(-50%, -50%) rotate(-45deg);
+          transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+@media (min-width: 1321px) {
+  main.main .navbar-nav .menu-close-btn {
+    display: none;
+  }
+}
+
+main.main .navbar-btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+@media (max-width: 576px) {
+  main.main .navbar-btn .btn {
+    display: none;
+  }
+}
+
+main.main .navbar-btn .menu-open-btn {
+  border: 1px solid #1F509F;
+  border-radius: 8px;
+  margin-left: 10px;
+  height: 34px;
+  width: 40px;
+  position: relative;
+  cursor: pointer;
+}
+
+main.main .navbar-btn .menu-open-btn:before, main.main .navbar-btn .menu-open-btn:after {
+  content: '';
+  width: 25%;
+  position: absolute;
+  height: 2px;
+  background-color: #1F509F;
+  top: 50%;
+}
+
+main.main .navbar-btn .menu-open-btn:before {
+  left: 50%;
+  -webkit-box-shadow: 0 -5px 0 0 #1F509F;
+          box-shadow: 0 -5px 0 0 #1F509F;
+}
+
+main.main .navbar-btn .menu-open-btn:after {
+  right: 50%;
+  -webkit-box-shadow: 0 5px 0 0 #1F509F;
+          box-shadow: 0 5px 0 0 #1F509F;
+}
+
+@media (min-width: 1321px) {
+  main.main .navbar-btn .menu-open-btn {
+    display: none;
+  }
 }
 
 main.main .dashboard {
