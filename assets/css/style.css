@@ -54,6 +54,10 @@ table {
   border-spacing: 0;
 }
 
+img {
+  max-width: 100%;
+}
+
 @font-face {
   font-family: JakartaRegular;
   src: url("../fonts/PlusJakartaDisplay-Regular.otf");
@@ -72,7 +76,7 @@ table {
 .btn {
   border-radius: 8px;
   text-decoration: none;
-  padding: 10px 15px;
+  padding: 18px 26px;
   font-size: 18px;
   -webkit-transition: all 0.2s linear;
   transition: all 0.2s linear;
@@ -118,6 +122,7 @@ table {
 
 .btn-sm {
   font-size: 14px;
+  padding: 10px 15px;
 }
 
 .btn:hover {
@@ -149,7 +154,7 @@ main.main {
 
 main.main .navbar {
   width: 100%;
-  padding-bottom: 20px;
+  padding: 20px 0 40px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -191,6 +196,9 @@ main.main .dashboard {
 main.main .dashboard .description {
   padding: 10px 5px 10px 30px;
   position: relative;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 40%;
+          flex: 0 1 40%;
 }
 
 main.main .dashboard .description-title {
@@ -223,8 +231,10 @@ main.main .dashboard .description-buttons .btn {
 }
 
 main.main .dashboard .description.center-items {
-  width: 100%;
   max-width: 600px;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 100%;
+          flex: 1 1 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -242,9 +252,12 @@ main.main .dashboard .description.center-items {
 
 main.main .dashboard-image {
   padding: 10px 0;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 60%;
+          flex: 0 1 60%;
 }
 
-main.main .dashboard-image .mg-right {
+main.main .dashboard-image.mg-right {
   margin-right: -75px;
 }
 
@@ -306,7 +319,7 @@ main.main .brands .brand-list {
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
-  padding: 50px 0;
+  padding: 50px 0 20px;
 }
 
 main.main .brands .brand-list .list-item {
@@ -404,6 +417,13 @@ main.main .features .details .features-list-item .features-text {
 }
 
 main.main .services {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   padding: 20px 50px;
 }
 
@@ -415,21 +435,32 @@ main.main .services-title {
 }
 
 main.main .services-list {
-  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  margin: 20px -15px;
+  margin: 20px -20px;
 }
 
 main.main .services-list .list-item {
-  -webkit-box-flex: 1;
-      -ms-flex: 1 0 calc(25% - 40px);
-          flex: 1 0 calc(25% - 40px);
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 25%;
+          flex: 0 1 25%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+main.main .services-list .list-item-img {
+  width: 100%;
   border: 1px solid #f1f1f1;
-  margin: 15px;
   border-radius: 15px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -441,6 +472,7 @@ main.main .services-list .list-item {
       -ms-flex-pack: center;
           justify-content: center;
   padding: 30px 0;
+  margin: 20px;
 }
 
 main.main .categories {
@@ -525,7 +557,7 @@ main.main .article {
 }
 
 main.main .article.bg-blue {
-  background-color: #E5F4FE;
+  background-color: #e5f4fe;
 }
 
 main.main .article.bg-orange {
@@ -673,5 +705,82 @@ main.main .cards .card-list-item .card-item-title {
 main.main .cards .card-list-item .card-item-text {
   color: #6b747a;
   line-height: initial;
+}
+
+main.main .footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+main.main .footer-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 60px 0 40px;
+}
+
+main.main .footer-content .logo-info {
+  max-width: 220px;
+  padding: 20px 0;
+  color: #20484f;
+  line-height: initial;
+}
+
+main.main .footer-menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 50%;
+          flex: 0 1 50%;
+}
+
+main.main .footer-menu-col {
+  padding-right: 30px;
+}
+
+main.main .footer-menu-col:last-child {
+  padding-right: 0;
+}
+
+main.main .footer-menu-col .menu-list-item {
+  padding-bottom: 20px;
+  color: #20484f;
+}
+
+main.main .footer-menu-col .menu-list-item .item-link {
+  color: #20484f;
+}
+
+main.main .footer-menu-col .menu-list-item.list-title {
+  font-size: 18px;
+  font-family: JakartaMedium, sans-serif;
+  padding-bottom: 24px;
+}
+
+main.main .footer .copyright {
+  height: 100px;
+  border-radius: 40px;
+  background-color: #f6f8fa;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-size: 14px;
+  margin: 20px 0 50px;
+  color: #20484f;
 }
 /*# sourceMappingURL=style.css.map */

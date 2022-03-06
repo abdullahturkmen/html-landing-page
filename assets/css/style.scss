@@ -12,6 +12,7 @@ body {
     a {
         color: #072125;
     }
+
 }
 
 main.main {
@@ -22,7 +23,7 @@ main.main {
 
     .navbar {
         width: 100%;
-        padding-bottom: 20px;
+        padding: 20px 0 40px;
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -53,6 +54,7 @@ main.main {
         .description {
             padding: 10px 5px 10px 30px;
             position: relative;
+            flex: 0 1 40%;
 
             &-title {
                 font-family: JakartaMedium, sans-serif;
@@ -85,8 +87,8 @@ main.main {
             }
 
             &.center-items {
-                width: 100%;
                 max-width: 600px;
+                flex: 1 1 100%;
                 display: flex;
                 flex-direction: column;
                 align-items: center;
@@ -97,7 +99,8 @@ main.main {
         }
         &-image {
             padding: 10px 0;
-            .mg-right {
+            flex: 0 1 60%;
+            &.mg-right {
                 margin-right: -75px;
             }
         }
@@ -153,7 +156,7 @@ main.main {
             display: flex;
             align-items: center;
             justify-content: space-evenly;
-            padding: 50px 0;
+            padding: 50px 0 20px;
 
             .list-item {
                 padding: 10px;
@@ -238,6 +241,8 @@ main.main {
     }
 
     .services {
+        display: flex;
+        flex-direction: column;
         padding: 20px 50px;
 
         &-title {
@@ -248,20 +253,26 @@ main.main {
         }
 
         &-list {
-            width: 100%;
             display: flex;
             flex-wrap: wrap;
-            margin: 20px -15px;
+            margin: 20px -20px;
 
             .list-item {
-                flex: 1 0 calc(25% - 40px);
-                border: 1px solid #f1f1f1;
-                margin: 15px;
-                border-radius: 15px;
+                flex: 0 1 25%;
                 display: flex;
-                align-items: center;
+                align-items: stretch;
                 justify-content: center;
-                padding: 30px 0;
+
+                &-img {
+                    width: 100%;
+                    border: 1px solid #f1f1f1;
+                    border-radius: 15px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    padding: 30px 0;
+                    margin: 20px;
+                }
             }
         }
     }
@@ -329,13 +340,12 @@ main.main {
         border-radius: 40px;
         margin: 150px 0 40px;
 
-        &.bg-{
-
-            &blue{
-                background-color: #E5F4FE;
+        &.bg- {
+            &blue {
+                background-color: #e5f4fe;
             }
 
-            &orange{
+            &orange {
                 background-color: #fdf1e1;
             }
         }
@@ -466,4 +476,68 @@ main.main {
             }
         }
     }
+
+    .footer {
+        display: flex;
+        flex-direction: column;
+
+        &-content {
+            display: flex;
+            justify-content: space-between;
+            padding: 60px 0 40px;
+
+            .logo{
+
+                &-info{
+                    max-width:220px;
+                    padding: 20px 0;
+                    color: #20484f;
+                    line-height: initial;
+                }
+            }
+        }
+
+        &-menu {
+            display: flex;
+            flex: 0 1 50%;
+
+            &-col {
+                padding-right: 30px;
+
+                &:last-child {
+                    padding-right: 0;
+                }
+
+                .menu-list {
+                    &-item {
+                        padding-bottom: 20px;
+                        color: #20484f;
+
+                        .item-link {
+                            color: #20484f;
+                        }
+
+                        &.list-title {
+                            font-size: 18px;
+                            font-family: JakartaMedium, sans-serif;
+                            padding-bottom: 24px;
+                        }
+                    }
+                }
+            }
+        }
+
+        .copyright {
+            height: 100px;
+            border-radius: 40px;
+            background-color: #f6f8fa;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 14px;
+            margin: 20px 0 50px;
+            color: #20484f;
+        }
+    }
 }
+

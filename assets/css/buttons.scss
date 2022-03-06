@@ -3,7 +3,7 @@
 .btn {
     border-radius: 8px;
     text-decoration: none;
-    padding: 10px 15px;
+    padding: 18px 26px;
     font-size: 18px;
     transition: all 0.2s linear;
     display: inline-block;
@@ -47,6 +47,7 @@
 
     &-sm {
         font-size: 14px;
+        padding: 10px 15px;
     }
 
     &:hover {
