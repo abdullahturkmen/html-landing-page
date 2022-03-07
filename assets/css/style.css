@@ -157,9 +157,15 @@ body a {
 
 main.main {
   width: 100%;
-  max-width: 1200px;
+  max-width: 1360px;
   padding-top: 20px;
   margin: auto 20px;
+}
+
+@media (max-width: 1480px) {
+  main.main {
+    max-width: 1200px;
+  }
 }
 
 @media (max-width: 576px) {
@@ -409,6 +415,7 @@ main.main .dashboard .description-title {
   font-family: JakartaMedium, sans-serif;
   font-size: 48px;
   padding-bottom: 20px;
+  line-height: 1.15;
 }
 
 @media (max-width: 768px) {
@@ -444,6 +451,7 @@ main.main .dashboard .description-text {
   font-size: 22px;
   padding-bottom: 30px;
   line-height: initial;
+  color: #31383d;
 }
 
 @media (max-width: 768px) {
@@ -537,6 +545,10 @@ main.main .dashboard-blue {
   color: #fff;
   position: relative;
   overflow: hidden;
+}
+
+main.main .dashboard-blue .description-text {
+  color: #fff;
 }
 
 main.main .dashboard-blue:before, main.main .dashboard-blue:after {
@@ -971,6 +983,7 @@ main.main .categories .description-title {
   font-family: JakartaMedium, sans-serif;
   font-size: 36px;
   padding-bottom: 20px;
+  line-height: 1.15;
 }
 
 @media (max-width: 768px) {
@@ -1074,8 +1087,16 @@ main.main .article.bg-blue {
   background-color: #e5f4fe;
 }
 
+main.main .article.bg-blue .article-img::before {
+  background-color: #dbedf9;
+}
+
 main.main .article.bg-orange {
   background-color: #fdf1e1;
+}
+
+main.main .article.bg-orange .article-img::before {
+  background-color: #f5e6d3;
 }
 
 main.main .article-img {
@@ -1083,12 +1104,40 @@ main.main .article-img {
       -ms-flex: 0 0 50%;
           flex: 0 0 50%;
   margin-top: -60px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
 }
 
 @media (max-width: 992px) {
   main.main .article-img {
-    padding: 50px 50px 0;
+    width: 100%;
   }
+}
+
+main.main .article-img:before {
+  content: "";
+  position: absolute;
+  height: 100%;
+  aspect-ratio: 1;
+  top: 80%;
+  right: 0;
+  -webkit-transform: translate(0, -50%);
+          transform: translate(0, -50%);
+  border-radius: 100%;
+  z-index: 0;
+}
+
+@media (max-width: 992px) {
+  main.main .article-img:before {
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+  }
+}
+
+main.main .article-img img {
+  position: relative;
 }
 
 main.main .article .description {
@@ -1099,6 +1148,7 @@ main.main .article .description {
   border-radius: inherit;
   padding: 50px;
   margin: auto;
+  position: relative;
 }
 
 @media (max-width: 992px) {

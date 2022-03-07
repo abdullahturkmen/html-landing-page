@@ -17,9 +17,13 @@ body {
 
 main.main {
     width: 100%;
-    max-width: 1200px;
+    max-width: 1360px;
     padding-top: 20px;
     margin: auto 20px;
+
+    @include MaxWidthResponsive(1480px) {
+        max-width: 1200px;
+    }
 
     @include MaxWidthResponsive(576px) {
         width: calc(100% - 20px);
@@ -206,6 +210,7 @@ main.main {
                 font-family: JakartaMedium, sans-serif;
                 font-size: 48px;
                 padding-bottom: 20px;
+                line-height: 1.15;
 
                 @include MaxWidthResponsive(768px) {
                     font-size: 36px;
@@ -233,6 +238,7 @@ main.main {
                 font-size: 22px;
                 padding-bottom: 30px;
                 line-height: initial;
+                color: #31383d;
 
                 @include MaxWidthResponsive(768px) {
                     font-size: 18px;
@@ -306,6 +312,10 @@ main.main {
             color: #fff;
             position: relative;
             overflow: hidden;
+
+            .description-text {
+                color: #fff;
+            }
 
             &:before,
             &:after {
@@ -611,6 +621,7 @@ main.main {
                 font-family: JakartaMedium, sans-serif;
                 font-size: 36px;
                 padding-bottom: 20px;
+                line-height: 1.15;
 
                 @include MaxWidthResponsive(768px) {
                     font-size: 32px;
@@ -691,19 +702,55 @@ main.main {
         &.bg- {
             &blue {
                 background-color: #e5f4fe;
+
+                .article-img{
+                    &::before{
+                        background-color: #dbedf9;
+                    }
+                }
             }
 
             &orange {
                 background-color: #fdf1e1;
+
+                .article-img{
+                    &::before{
+                        background-color: #f5e6d3;
+                    }
+                }
             }
         }
 
         &-img {
             flex: 0 0 50%;
             margin-top: -60px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
 
             @include MaxWidthResponsive(992px) {
-                padding: 50px 50px 0;
+                width: 100%;
+            }
+
+            &:before {
+                content: "";
+                position: absolute;
+                height: 100%;
+                aspect-ratio: 1;
+                top: 80%;
+                right: 0;
+                transform: translate(0, -50%);
+                border-radius: 100%;
+                z-index: 0;
+
+                @include MaxWidthResponsive(992px) {
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                }
+            }
+
+            img {
+                position: relative;
             }
         }
 
@@ -713,6 +760,7 @@ main.main {
             border-radius: inherit;
             padding: 50px;
             margin: auto;
+            position: relative;
 
             @include MaxWidthResponsive(992px) {
                 padding: 40px;
