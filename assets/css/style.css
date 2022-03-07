@@ -423,7 +423,7 @@ main.main .dashboard {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-bottom: 20px;
+  margin-bottom: 50px;
 }
 
 @media (max-width: 768px) {
@@ -457,13 +457,13 @@ main.main .dashboard .description {
 
 @media (max-width: 768px) {
   main.main .dashboard .description {
-    padding: 30px 20px;
+    padding: 35px 20px;
   }
 }
 
 @media (max-width: 576px) {
   main.main .dashboard .description {
-    padding: 20px 10px;
+    padding: 30px 10px;
   }
 }
 
@@ -664,18 +664,18 @@ main.main .dashboard-blue:after {
 
 main.main .brands {
   width: 100%;
-  padding-bottom: 20px;
+  padding-bottom: 30px;
 }
 
 @media (max-width: 768px) {
   main.main .brands {
-    padding-bottom: 15px;
+    padding-bottom: 25px;
   }
 }
 
 @media (max-width: 576px) {
   main.main .brands {
-    padding-bottom: 10px;
+    padding-bottom: 20px;
   }
 }
 
@@ -711,7 +711,7 @@ main.main .brands .brand-list .list-item {
 
 @media (max-width: 576px) {
   main.main .brands .brand-list .list-item {
-    padding: 5px;
+    padding: 8px;
   }
 }
 
@@ -727,7 +727,7 @@ main.main .features {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-bottom: 20px;
+  margin-bottom: 60px;
 }
 
 @media (max-width: 992px) {
@@ -743,12 +743,14 @@ main.main .features {
 @media (max-width: 768px) {
   main.main .features {
     padding: 20px;
+    margin-bottom: 50px;
   }
 }
 
 @media (max-width: 576px) {
   main.main .features {
-    padding: 10px;
+    padding: 10px 0;
+    margin-bottom: 40px;
   }
 }
 
@@ -819,6 +821,12 @@ main.main .features .details .features-list {
   margin: 0 -10px;
 }
 
+@media (max-width: 576px) {
+  main.main .features .details .features-list {
+    margin: 0;
+  }
+}
+
 main.main .features .details .features-list-item {
   -webkit-box-flex: 1;
       -ms-flex: 1 0 calc(50% - 20px);
@@ -876,24 +884,24 @@ main.main .services {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  padding: 20px 50px;
+  padding: 20px 50px 60px;
 }
 
 @media (max-width: 992px) {
   main.main .services {
-    padding: 20px 30px;
+    padding: 20px 30px 50px;
   }
 }
 
 @media (max-width: 768px) {
   main.main .services {
-    padding: 20px;
+    padding: 20px 20px 40px;
   }
 }
 
 @media (max-width: 576px) {
   main.main .services {
-    padding: 10px;
+    padding: 0 0 30px;
   }
 }
 
@@ -902,6 +910,7 @@ main.main .services-title {
   font-size: 36px;
   font-family: JakartaMedium, sans-serif;
   line-height: initial;
+  margin-bottom: 20px;
 }
 
 @media (max-width: 992px) {
@@ -931,9 +940,15 @@ main.main .services-list {
   margin: 20px -20px;
 }
 
-@media (max-width: 576px) {
+@media (max-width: 992px) {
   main.main .services-list {
     margin: 20px -10px;
+  }
+}
+
+@media (max-width: 576px) {
+  main.main .services-list {
+    margin: 20px -5px;
   }
 }
 
@@ -1306,7 +1321,7 @@ main.main .cards {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  padding-bottom: 20px;
+  padding-bottom: 60px;
   counter-reset: card;
 }
 
@@ -1314,7 +1329,7 @@ main.main .cards-section-title {
   font-size: 36px;
   text-align: center;
   font-family: JakartaMedium, sans-serif;
-  padding: 50px 0;
+  padding: 100px 0 80px;
 }
 
 @media (max-width: 768px) {
@@ -1467,7 +1482,7 @@ main.main .footer-content {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  padding: 60px 0 40px;
+  padding: 100px 0 60px;
 }
 
 @media (max-width: 992px) {

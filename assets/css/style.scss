@@ -178,7 +178,7 @@ main.main {
         border-radius: 40px;
         display: flex;
         align-items: center;
-        margin-bottom: 20px;
+        margin-bottom: 50px;
 
         @include MaxWidthResponsive(768px) {
             border-radius: 30px;
@@ -199,11 +199,11 @@ main.main {
             }
 
             @include MaxWidthResponsive(768px) {
-                padding: 30px 20px;
+                padding: 35px 20px;
             }
 
             @include MaxWidthResponsive(576px) {
-                padding: 20px 10px;
+                padding: 30px 10px;
             }
 
             &-title {
@@ -367,14 +367,14 @@ main.main {
 
     .brands {
         width: 100%;
-        padding-bottom: 20px;
+        padding-bottom: 30px;
 
         @include MaxWidthResponsive(768px) {
-            padding-bottom: 15px;
+            padding-bottom: 25px;
         }
 
         @include MaxWidthResponsive(576px) {
-            padding-bottom: 10px;
+            padding-bottom: 20px;
         }
 
         .brand-list {
@@ -396,7 +396,7 @@ main.main {
                 padding: 10px;
 
                 @include MaxWidthResponsive(576px) {
-                    padding: 5px;
+                    padding: 8px;
                 }
 
                 img {
@@ -410,7 +410,7 @@ main.main {
         padding: 50px;
         display: flex;
         align-items: center;
-        margin-bottom: 20px;
+        margin-bottom: 60px;
 
         @include MaxWidthResponsive(992px) {
             flex-direction: column;
@@ -419,10 +419,12 @@ main.main {
 
         @include MaxWidthResponsive(768px) {
             padding: 20px;
+            margin-bottom: 50px;
         }
 
         @include MaxWidthResponsive(576px) {
-            padding: 10px;
+            padding: 10px 0;
+            margin-bottom: 40px;
         }
 
         .description {
@@ -471,6 +473,10 @@ main.main {
                 display: flex;
                 flex-wrap: wrap;
                 margin: 0 -10px;
+
+                @include MaxWidthResponsive(576px) {
+                    margin: 0;
+                }
 
                 &-item {
                     flex: 1 0 calc(50% - 20px);
@@ -522,18 +528,18 @@ main.main {
     .services {
         display: flex;
         flex-direction: column;
-        padding: 20px 50px;
+        padding: 20px 50px 60px;
 
         @include MaxWidthResponsive(992px) {
-            padding: 20px 30px;
+            padding: 20px 30px 50px;
         }
 
         @include MaxWidthResponsive(768px) {
-            padding: 20px;
+            padding: 20px 20px 40px;
         }
 
         @include MaxWidthResponsive(576px) {
-            padding: 10px;
+            padding: 0 0 30px;
         }
 
         &-title {
@@ -541,6 +547,7 @@ main.main {
             font-size: 36px;
             font-family: JakartaMedium, sans-serif;
             line-height: initial;
+            margin-bottom: 20px;
 
             @include MaxWidthResponsive(992px) {
                 width: 100%;
@@ -560,8 +567,12 @@ main.main {
             flex-wrap: wrap;
             margin: 20px -20px;
 
-            @include MaxWidthResponsive(576px) {
+            @include MaxWidthResponsive(992px) {
                 margin: 20px -10px;
+            }
+
+            @include MaxWidthResponsive(576px) {
+                margin: 20px -5px;
             }
 
             .list-item {
@@ -836,14 +847,14 @@ main.main {
     .cards {
         display: flex;
         flex-direction: column;
-        padding-bottom: 20px;
+        padding-bottom: 60px;
         counter-reset: card;
 
         &-section-title {
             font-size: 36px;
             text-align: center;
             font-family: JakartaMedium, sans-serif;
-            padding: 50px 0;
+            padding: 100px 0 80px;
 
             @include MaxWidthResponsive(768px) {
                 font-size: 32px;
@@ -964,7 +975,7 @@ main.main {
         &-content {
             display: flex;
             justify-content: space-between;
-            padding: 60px 0 40px;
+            padding: 100px 0 60px;
 
             @include MaxWidthResponsive(992px) {
                 flex-direction: column;
