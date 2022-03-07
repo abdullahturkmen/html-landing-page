@@ -3,10 +3,26 @@
   text-decoration: none;
   padding: 18px 26px;
   font-size: 18px;
-  -webkit-transition: all 0.2s linear;
-  transition: all 0.2s linear;
+  -webkit-transition: all 0.3s linear;
+  transition: all 0.3s linear;
   display: inline-block;
   border: 1px solid transparent;
+  position: relative;
+  overflow: hidden;
+}
+
+.btn:before, .btn:after {
+  content: "";
+  position: absolute;
+  aspect-ratio: 1/1;
+  top: 50%;
+  left: 50%;
+  background: #ffffffa8;
+  -webkit-transition: all 0.8s linear;
+  transition: all 0.8s linear;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  border-radius: 100%;
 }
 
 .btn-primary {
@@ -50,8 +66,35 @@
   padding: 10px 15px;
 }
 
-.btn:hover {
-  -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-          box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+.btn:hover:before {
+  -webkit-animation: drop 1.5s linear 0s infinite;
+          animation: drop 1.5s linear 0s infinite;
+}
+
+.btn:hover:after {
+  -webkit-animation: drop 1.5s linear 0.35s infinite;
+          animation: drop 1.5s linear 0.35s infinite;
+}
+
+@-webkit-keyframes drop {
+  from {
+    width: 0;
+    opacity: 1;
+  }
+  to {
+    width: 125%;
+    opacity: 0;
+  }
+}
+
+@keyframes drop {
+  from {
+    width: 0;
+    opacity: 1;
+  }
+  to {
+    width: 125%;
+    opacity: 0;
+  }
 }
 /*# sourceMappingURL=buttons.css.map */

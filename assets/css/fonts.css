@@ -1,4 +1,9 @@
 @font-face {
+  font-family: JakartaLight;
+  src: url("../fonts/PlusJakartaDisplay-Light.otf");
+}
+
+@font-face {
   font-family: JakartaRegular;
   src: url("../fonts/PlusJakartaDisplay-Regular.otf");
 }

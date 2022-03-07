@@ -69,6 +69,11 @@ img {
  *
  */
 @font-face {
+  font-family: JakartaLight;
+  src: url("../fonts/PlusJakartaDisplay-Light.otf");
+}
+
+@font-face {
   font-family: JakartaRegular;
   src: url("../fonts/PlusJakartaDisplay-Regular.otf");
 }
@@ -88,10 +93,26 @@ img {
   text-decoration: none;
   padding: 18px 26px;
   font-size: 18px;
-  -webkit-transition: all 0.2s linear;
-  transition: all 0.2s linear;
+  -webkit-transition: all 0.3s linear;
+  transition: all 0.3s linear;
   display: inline-block;
   border: 1px solid transparent;
+  position: relative;
+  overflow: hidden;
+}
+
+.btn:before, .btn:after {
+  content: "";
+  position: absolute;
+  aspect-ratio: 1/1;
+  top: 50%;
+  left: 50%;
+  background: #ffffffa8;
+  -webkit-transition: all 0.8s linear;
+  transition: all 0.8s linear;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  border-radius: 100%;
 }
 
 .btn-primary {
@@ -135,9 +156,36 @@ img {
   padding: 10px 15px;
 }
 
-.btn:hover {
-  -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-          box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+.btn:hover:before {
+  -webkit-animation: drop 1.5s linear 0s infinite;
+          animation: drop 1.5s linear 0s infinite;
+}
+
+.btn:hover:after {
+  -webkit-animation: drop 1.5s linear 0.35s infinite;
+          animation: drop 1.5s linear 0.35s infinite;
+}
+
+@-webkit-keyframes drop {
+  from {
+    width: 0;
+    opacity: 1;
+  }
+  to {
+    width: 125%;
+    opacity: 0;
+  }
+}
+
+@keyframes drop {
+  from {
+    width: 0;
+    opacity: 1;
+  }
+  to {
+    width: 125%;
+    opacity: 0;
+  }
 }
 
 body {
@@ -383,7 +431,7 @@ main.main .dashboard {
 }
 
 main.main .dashboard .description {
-  padding: 10px 5px 10px 30px;
+  padding: 10px 5px 10px 60px;
   position: relative;
   -webkit-box-flex: 0;
       -ms-flex: 0 1 40%;
@@ -479,6 +527,10 @@ main.main .dashboard .description-buttons .btn {
   margin-bottom: 10px;
 }
 
+main.main .dashboard .description-buttons .btn:last-child {
+  margin-right: 0;
+}
+
 main.main .dashboard .description.center-items {
   max-width: 600px;
   -webkit-box-flex: 1;
@@ -513,7 +565,8 @@ main.main .dashboard-image {
 }
 
 main.main .dashboard-image.mg-right {
-  margin-right: -75px;
+  margin-right: -40px;
+  text-align: right;
 }
 
 main.main .dashboard.chain-img {
@@ -545,10 +598,37 @@ main.main .dashboard-blue {
   color: #fff;
   position: relative;
   overflow: hidden;
+  padding: 50px 0;
+}
+
+@media (max-width: 768px) {
+  main.main .dashboard-blue {
+    padding: 40px 0;
+  }
+}
+
+@media (max-width: 576px) {
+  main.main .dashboard-blue {
+    padding: 25px 0;
+  }
 }
 
 main.main .dashboard-blue .description-text {
   color: #fff;
+  font-family: JakartaLight;
+  padding: 20px 0 50px;
+}
+
+@media (max-width: 768px) {
+  main.main .dashboard-blue .description-text {
+    padding: 15px 0 40px;
+  }
+}
+
+@media (max-width: 576px) {
+  main.main .dashboard-blue .description-text {
+    padding: 10px 0 30px;
+  }
 }
 
 main.main .dashboard-blue:before, main.main .dashboard-blue:after {
@@ -679,7 +759,7 @@ main.main .features .description {
 }
 
 main.main .features .description-title {
-  font-family: JakartaBold, sans-serif;
+  font-family: JakartaMedium, sans-serif;
   font-size: 36px;
   padding-bottom: 20px;
   line-height: initial;
