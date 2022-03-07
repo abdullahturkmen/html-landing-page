@@ -730,6 +730,7 @@ main.main {
 
             @include MaxWidthResponsive(992px) {
                 width: 100%;
+                padding-top: 50px;
             }
 
             &:before {

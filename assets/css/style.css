@@ -1112,6 +1112,7 @@ main.main .article-img {
 @media (max-width: 992px) {
   main.main .article-img {
     width: 100%;
+    padding-top: 50px;
   }
 }
 
