@@ -33,6 +33,10 @@
             color: $clr-blue;
             border-color: $clr-blue;
             background-color: #fff;
+
+            &:before, &:after {
+                background: #b4b4b440;
+            }
         }
     }
 
@@ -52,6 +56,10 @@
         color: $clr-blue;
         background-color: #fff;
         border-color: #fff;
+
+        &:before, &:after {
+            background: #b4b4b440;
+        }
 
         &-outline {
             color: #fff;

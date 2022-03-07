@@ -37,6 +37,10 @@
   background-color: #fff;
 }
 
+.btn-primary-outline:before, .btn-primary-outline:after {
+  background: #b4b4b440;
+}
+
 .btn-warning {
   color: #fff;
   background-color: #F29D4B;
@@ -53,6 +57,10 @@
   color: #1F509F;
   background-color: #fff;
   border-color: #fff;
+}
+
+.btn-light:before, .btn-light:after {
+  background: #b4b4b440;
 }
 
 .btn-light-outline {
