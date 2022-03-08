@@ -646,6 +646,7 @@ main.main {
             display: flex;
             flex-direction: column;
             justify-content: center;
+            flex: 0 0 25%;
 
             @include MaxWidthResponsive(992px) {
                 flex: 1 1 100%;
@@ -897,6 +898,10 @@ main.main {
 
                 @include MaxWidthResponsive(768px) {
                     transform: translate(-50%, -50%) rotate(90deg);
+                }
+
+                @include MaxWidthResponsive(576px) {
+                    width: 125%;
                 }
             }
 
