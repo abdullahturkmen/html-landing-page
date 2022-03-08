@@ -613,7 +613,7 @@ main.main {
         display: flex;
         flex-wrap: wrap;
         align-items: stretch;
-        margin: 0 -30px 20px;
+        margin: 0 -20px 20px;
         padding: 30px 0;
 
         @include MaxWidthResponsive(1320px) {
@@ -630,11 +630,7 @@ main.main {
 
         & > * {
             flex: 1 0 calc(33.333% - 100px);
-            margin: 0 30px;
-
-            @include MaxWidthResponsive(1320px) {
-                margin: 0 20px;
-            }
+            margin: 0 20px;
 
             @include MaxWidthResponsive(992px) {
                 margin: 0 10px;

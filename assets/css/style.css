@@ -1018,7 +1018,7 @@ main.main .categories {
   -webkit-box-align: stretch;
       -ms-flex-align: stretch;
           align-items: stretch;
-  margin: 0 -30px 20px;
+  margin: 0 -20px 20px;
   padding: 30px 0;
 }
 
@@ -1047,13 +1047,7 @@ main.main .categories > * {
   -webkit-box-flex: 1;
       -ms-flex: 1 0 calc(33.333% - 100px);
           flex: 1 0 calc(33.333% - 100px);
-  margin: 0 30px;
-}
-
-@media (max-width: 1320px) {
-  main.main .categories > * {
-    margin: 0 20px;
-  }
+  margin: 0 20px;
 }
 
 @media (max-width: 992px) {
