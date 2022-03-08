@@ -318,6 +318,15 @@ main.main .navbar-nav .menu-list-item {
   }
 }
 
+main.main .navbar-nav .menu-list-item .item-link {
+  -webkit-transition: all 0.3s linear;
+  transition: all 0.3s linear;
+}
+
+main.main .navbar-nav .menu-list-item .item-link:hover {
+  color: #1f509f;
+}
+
 main.main .navbar-nav .menu-list-item:last-child {
   padding-right: 10px;
 }
@@ -331,6 +340,9 @@ main.main .navbar-nav .menu-close-btn {
   right: 20px;
   top: 20px;
   cursor: pointer;
+  outline: none;
+  -webkit-transition: all 0.3s linear;
+  transition: all 0.3s linear;
 }
 
 main.main .navbar-nav .menu-close-btn:before, main.main .navbar-nav .menu-close-btn:after {
@@ -351,6 +363,14 @@ main.main .navbar-nav .menu-close-btn:before {
 main.main .navbar-nav .menu-close-btn:after {
   -webkit-transform: translate(-50%, -50%) rotate(-45deg);
           transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+main.main .navbar-nav .menu-close-btn:hover {
+  background-color: #1F509F;
+}
+
+main.main .navbar-nav .menu-close-btn:hover:before, main.main .navbar-nav .menu-close-btn:hover:after {
+  background-color: #fff;
 }
 
 @media (min-width: 1321px) {
@@ -382,14 +402,17 @@ main.main .navbar-btn .menu-open-btn {
   border-radius: 8px;
   margin-left: 10px;
   height: 34px;
-  width: 40px;
+  width: 34px;
   position: relative;
   cursor: pointer;
+  outline: none;
+  -webkit-transition: all 0.3s linear;
+  transition: all 0.3s linear;
 }
 
 main.main .navbar-btn .menu-open-btn:before, main.main .navbar-btn .menu-open-btn:after {
   content: "";
-  width: 25%;
+  width: 30%;
   position: absolute;
   height: 2px;
   background-color: #1F509F;
@@ -406,6 +429,16 @@ main.main .navbar-btn .menu-open-btn:after {
   right: 50%;
   -webkit-box-shadow: 0 5px 0 0 #1F509F;
           box-shadow: 0 5px 0 0 #1F509F;
+}
+
+main.main .navbar-btn .menu-open-btn:hover {
+  background-color: #1F509F;
+}
+
+main.main .navbar-btn .menu-open-btn:hover:before, main.main .navbar-btn .menu-open-btn:hover:after {
+  background-color: #fff;
+  -webkit-box-shadow: 0 5px 0 0 #fff,0 -5px 0 0 #fff;
+          box-shadow: 0 5px 0 0 #fff,0 -5px 0 0 #fff;
 }
 
 @media (min-width: 1321px) {
