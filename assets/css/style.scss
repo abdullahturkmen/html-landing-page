@@ -194,23 +194,19 @@ main.main {
             flex: 0 1 40%;
 
             @include MaxWidthResponsive(1320px) {
-                padding: 40px 30px;
+                padding: 60px 30px;
                 flex: 0 1 auto;
             }
 
-            @include MaxWidthResponsive(768px) {
-                padding: 35px 20px;
-            }
-
             @include MaxWidthResponsive(576px) {
-                padding: 30px 10px;
+                padding: 50px 20px;
             }
 
             &-title {
                 font-family: JakartaMedium, sans-serif;
                 font-size: 48px;
-                padding-bottom: 20px;
-                line-height: 1.15;
+                padding-bottom: 40px;
+                line-height: 1.2;
 
                 @include MaxWidthResponsive(768px) {
                     font-size: 36px;
@@ -236,8 +232,8 @@ main.main {
 
             &-text {
                 font-size: 22px;
-                padding-bottom: 30px;
-                line-height: initial;
+                padding-bottom: 40px;
+                line-height: 1.6;
                 color: #31383d;
 
                 @include MaxWidthResponsive(768px) {
@@ -257,9 +253,17 @@ main.main {
             }
 
             &-buttons {
+                @include MaxWidthResponsive(576px) {
+                    flex-direction: column;
+                }
+
                 .btn {
                     margin-right: 15px;
                     margin-bottom: 10px;
+
+                    @include MaxWidthResponsive(576px) {
+                        margin-right: 0;
+                    }
 
                     &:last-child {
                         margin-right: 0;
@@ -335,7 +339,7 @@ main.main {
                 @include MaxWidthResponsive(768px) {
                     padding: 15px 0 40px;
                 }
-    
+
                 @include MaxWidthResponsive(576px) {
                     padding: 10px 0 30px;
                 }
@@ -371,10 +375,6 @@ main.main {
 
         @include MaxWidthResponsive(768px) {
             padding-bottom: 25px;
-        }
-
-        @include MaxWidthResponsive(576px) {
-            padding-bottom: 20px;
         }
 
         .brand-list {
@@ -439,7 +439,7 @@ main.main {
             &-title {
                 font-family: JakartaMedium, sans-serif;
                 font-size: 36px;
-                padding-bottom: 20px;
+                padding-bottom: 30px;
                 line-height: initial;
 
                 @include MaxWidthResponsive(768px) {
@@ -453,8 +453,8 @@ main.main {
 
             &-text {
                 font-size: 18px;
-                padding-bottom: 20px;
-                line-height: initial;
+                padding-bottom: 30px;
+                line-height: 1.6;
                 color: #6b747a;
 
                 @include MaxWidthResponsive(768px) {
@@ -491,7 +491,7 @@ main.main {
                         &-icon {
                             &.icon {
                                 display: block;
-                                padding-bottom: 20px;
+                                padding-bottom: 25px;
 
                                 &-clock {
                                     content: url("./../img/features/icon-clock.svg");
@@ -511,13 +511,13 @@ main.main {
                         &-title {
                             font-family: JakartaBold, sans-serif;
                             font-size: 18px;
-                            padding-bottom: 12px;
+                            padding-bottom: 15px;
                         }
 
                         &-text {
                             font-size: 14px;
                             color: #6b747a;
-                            line-height: initial;
+                            line-height: 1.6;
                         }
                     }
                 }
@@ -546,7 +546,7 @@ main.main {
             width: 60%;
             font-size: 36px;
             font-family: JakartaMedium, sans-serif;
-            line-height: initial;
+            line-height: 1.6;
             margin-bottom: 20px;
 
             @include MaxWidthResponsive(992px) {
@@ -655,8 +655,8 @@ main.main {
             &-title {
                 font-family: JakartaMedium, sans-serif;
                 font-size: 36px;
-                padding-bottom: 20px;
-                line-height: 1.15;
+                padding-bottom: 30px;
+                line-height: 1.6;
 
                 @include MaxWidthResponsive(768px) {
                     font-size: 32px;
@@ -669,9 +669,9 @@ main.main {
 
             &-text {
                 font-size: 18px;
-                padding-bottom: 20px;
+                padding-bottom: 30px;
                 color: #6b747a;
-                line-height: initial;
+                line-height: 1.6;
 
                 @include MaxWidthResponsive(768px) {
                     font-size: 16px;
@@ -695,19 +695,19 @@ main.main {
             &-img {
                 width: 100%;
                 border-radius: 12px;
-                margin-bottom: 20px;
+                margin-bottom: 30px;
             }
 
             &-title {
                 font-family: JakartaMedium, sans-serif;
                 font-size: 24px;
-                padding-bottom: 20px;
-                line-height: initial;
+                padding-bottom: 25px;
+                line-height: 1.6;
             }
 
             &-text {
                 color: #6b747a;
-                line-height: initial;
+                line-height: 1.6;
             }
         }
     }
@@ -816,7 +816,8 @@ main.main {
             &-title {
                 font-family: JakartaMedium, sans-serif;
                 font-size: 36px;
-                padding-bottom: 20px;
+                padding-bottom: 30px;
+                line-height: 1.6;
 
                 @include MaxWidthResponsive(768px) {
                     font-size: 32px;
@@ -829,9 +830,9 @@ main.main {
 
             &-text {
                 font-size: 18px;
-                padding-bottom: 20px;
+                padding-bottom: 30px;
                 color: #6b747a;
-                line-height: initial;
+                line-height: 1.6;
 
                 @include MaxWidthResponsive(768px) {
                     font-size: 16px;
@@ -855,6 +856,7 @@ main.main {
             text-align: center;
             font-family: JakartaMedium, sans-serif;
             padding: 100px 0 80px;
+            line-height:1.6;
 
             @include MaxWidthResponsive(768px) {
                 font-size: 32px;
@@ -917,7 +919,7 @@ main.main {
                         display: block;
                         position: relative;
                         border-radius: 12px;
-                        margin-bottom: 20px;
+                        margin-bottom: 30px;
                         background-color: $clr-blue;
 
                         &:before {
@@ -956,12 +958,13 @@ main.main {
                     &-title {
                         font-size: 24px;
                         font-family: JakartaMedium, sans-serif;
-                        margin-bottom: 20px;
+                        margin-bottom: 25px;
+                        line-height:1.6;
                     }
 
                     &-text {
                         color: #6b747a;
-                        line-height: initial;
+                        line-height: 1.6;
                     }
                 }
             }
@@ -986,7 +989,7 @@ main.main {
                     max-width: 220px;
                     padding: 20px 0;
                     color: #20484f;
-                    line-height: initial;
+                    line-height: 1.6;
                 }
             }
         }
@@ -1023,7 +1026,7 @@ main.main {
 
                 .menu-list {
                     &-item {
-                        padding-bottom: 20px;
+                        padding-bottom: 25px;
                         color: #20484f;
 
                         .item-link {
@@ -1051,6 +1054,7 @@ main.main {
             margin: 20px 0 50px;
             color: #20484f;
             padding: 0 20px;
+            line-height: 1.6;
 
             @include MaxWidthResponsive(768px) {
                 border-radius: 30px;
